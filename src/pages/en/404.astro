@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<BaseLayout title={`${t('404.title')} - Learn Python`}>
+  <Header />
+  
+  <main class="flex-1 flex items-center justify-center py-16">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-2xl mx-auto">
+        <!-- 404 Illustration -->
+        <div class="mb-8">
+          <div class="text-9xl font-bold text-primary/20 mb-4">404</div>
+          <div class="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+        </div>
+        
+        <!-- Error Message -->
+        <h1 class="text-4xl font-bold text-foreground mb-4">
+          {t('404.title')}
+        </h1>
+        
+        <p class="text-xl text-muted-foreground mb-2">
+          {t('404.subtitle')}
+        </p>
+        
+        <p class="text-muted-foreground mb-8">
+          {t('404.description')}
+        </p>
+        
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a 
+            href="/en"
+            class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 bg-primary text-primary-foreground hover:bg-primary/90 h-11 px-8"
+          >
+            {t('404.back_home')}
+          </a>
+          
+          <a 
+            href="/en/materi"
+            class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+          >
+            {t('404.go_materials')}
+          </a>
+          
+          <a 
+            href="/en/playground"
+            class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8"
+          >
+            {t('404.go_playground')}
+          </a>
+        </div>
+        
+        <!-- Python Code Snippet -->
+        <div class="mt-12 p-6 bg-muted/50 rounded-lg text-left max-w-md mx-auto">
+          <div class="text-sm text-muted-foreground mb-2">Python says:</div>
+          <pre class="text-sm font-mono text-foreground"><code>try:
+    find_page("404")
+except PageNotFound:
+    print("Page not found!")
+    redirect_to_home()</code></pre>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</BaseLayout>

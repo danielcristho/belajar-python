@@ -89,6 +89,14 @@ export const ui = {
     'playground.welcome_comment': '# Selamat datang di Python Playground!\n# Tulis kode Python Anda di sini, lalu klik "Jalankan"\n\nprint("Hello, World!")\n\n# Operasi matematika\nx = 5\ny = 3\nprint(f"x + y = {x + y}")\nprint(f"x * y = {x * y}")',
     'playground.reset_comment': '# Selamat datang di Python Playground!\n# Tulis kode Python Anda di sini dan klik "Jalankan"\n\nprint("Hello, World!")',
     
+    // 404 Page
+    '404.title': 'Halaman Tidak Ditemukan',
+    '404.subtitle': 'Maaf, halaman yang Anda cari tidak dapat ditemukan.',
+    '404.description': 'Halaman mungkin telah dipindahkan, dihapus, atau URL yang Anda masukkan salah.',
+    '404.back_home': 'Kembali ke Beranda',
+    '404.go_materials': 'Lihat Materi Python',
+    '404.go_playground': 'Coba Playground',
+    
     // Footer
     'footer.copyright': '© 2025 Papua Open Source.',
   },
@@ -174,6 +182,14 @@ export const ui = {
     'playground.info': 'This editor uses Monaco Editor for Python syntax highlighting. The playground runs Python code using Pyodide WebAssembly in your browser!',
     'playground.welcome_comment': '# Welcome to Python Playground!\n# Write your code here, then click "Run"\n\nprint("Hello, World!")\n\n# Math operations\nx = 5\ny = 3\nprint(f"x + y = {x + y}")\nprint(f"x * y = {x * y}")',
     'playground.reset_comment': '# Welcome to Python Playground!\n# Write your Python code here and click "Run"\n\nprint("Hello, World!")',
+    
+    // 404 Page
+    '404.title': 'Page Not Found',
+    '404.subtitle': 'Sorry, the page you are looking for could not be found.',
+    '404.description': 'The page may have been moved, deleted, or the URL you entered is incorrect.',
+    '404.back_home': 'Back to Home',
+    '404.go_materials': 'View Python Materials',
+    '404.go_playground': 'Try Playground',
     
     // Footer
     'footer.copyright': '© 2025 Papua Open Source.',
