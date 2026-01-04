@@ -71,7 +71,7 @@ const {
     <!-- Split Layout -->
     <div class="flex-1 flex overflow-hidden">
       <!-- Content Panel (Left) -->
-      <div class="w-1/2 overflow-auto border-r bg-background">
+      <div class="w-3/5 overflow-auto border-r bg-background">
         <div class="p-6">
           <article class="prose prose-slate dark:prose-invert max-w-none">
             <slot name="content" />
@@ -80,11 +80,11 @@ const {
       </div>
 
       <!-- Playground Panel (Right) -->
-      <div class="w-1/2 flex flex-col bg-muted/20">
+      <div class="w-2/5 flex flex-col bg-muted/20">
         <div class="p-2 border-b bg-muted/30">
           <span class="text-sm font-medium text-muted-foreground">Try it yourself</span>
         </div>
-        <div class="flex-1 overflow-hidden">
+        <div class="flex-2 overflow-hidden">
           <slot name="playground" />
         </div>
       </div>
