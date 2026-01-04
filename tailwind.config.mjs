@@ -1,3 +1,5 @@
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -54,12 +56,12 @@ export default {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
-				// Python-inspired colors
+				// python base color
 				'python-blue': 'hsl(var(--python-blue))',
 				'python-yellow': 'hsl(var(--python-yellow))',
 				'python-yellow-muted': 'hsl(var(--python-yellow-muted))',
 			},
 		},
 	},
-	plugins: [require('@tailwindcss/typography')],
+	plugins: [typography],
 }
